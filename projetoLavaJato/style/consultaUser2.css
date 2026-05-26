@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../assets/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(30px);
+    transform: scale(1.05);
+
+    z-index: -1;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+
+.container h1 {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+
+.container p {
+    color: #475569;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.formu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.formu input {
+    padding: 15px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.3s;
+    background: #f8fafc;
+}
+
+.formu input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+    background: white;
+}
+
+
+.formu button {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.formu button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1d4ed8, #020617);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #0f172a;
+    
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+    
+}

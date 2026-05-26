@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../assets/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(30px);
+    transform: scale(1.05);
+
+    z-index: -1;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease;
+   
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0f172a;
+    font-size: 32px;
+}
+
+
+h3 {
+    text-align: center;
+    color: #dc2626;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+
+th {
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+
+tr:hover td {
+    background: #dbeafe;
+}
+
+
+.voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.voltar::before {
+    content: "← Voltar";
+}
+
+.voltar:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+.container a {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
