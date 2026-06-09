@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6f9;
+}
+
+/* MENU LATERAL */
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    background:#355c8b;
+}
+
+.logo{
+    text-align:center;
+    padding:30px 15px;
+    color:white;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.sidebar ul li a:hover{
+    background:#2a4a72;
+}
+
+.sidebar i{
+    margin-right:10px;
+}
+
+/* CONTEÚDO */
+
+.main{
+    flex:1;
+}
+
+header{
+    background:#222;
+    color:white;
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+}
+
+.usuario{
+    font-weight:bold;
+}
+
+.conteudo{
+    padding:30px;
+}
+
+.titulo-pagina{
+    font-size:24px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+/* BOTÃO */
+
+.btn-novo{
+    background:#2d89ef;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-novo:hover{
+    background:#1565c0;
+}
+
+/* TABELA */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#355c8b;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+table tr:hover{
+    background:#f2f2f2;
+}
+
+/* ÍCONES */
+
+.editar{
+    color:#f0ad4e;
+    font-size:18px;
+}
+
+.excluir{
+    color:#dc3545;
+    font-size:18px;
+    margin-left:10px;
+}

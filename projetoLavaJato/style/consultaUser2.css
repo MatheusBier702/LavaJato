@@ -100,25 +100,54 @@ body::before {
     box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
 
-.btn-primary,
-.btn-secondary {
-    padding: 14px 28px;
-    border: none;
+.botoes-group {
+    display: flex;
+    gap: 15px; 
+    width: 100%;
+}
+
+.botoes-group button,
+.botoes-group .btn-secondary {
+    flex: 1;
+    padding: 15px;
     border-radius: 12px;
-    cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
-    
+    text-decoration: none;
+    text-align: center;    
+}
+
+.btn-buscar {
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    color: white;
+}
+
+.btn-buscar:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1d4ed8, #020617);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
     background: #e2e8f0;
     color: #0f172a;
-    
+    border: none;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-secondary:hover {
+    transform: translateY(-2px);
     background: #cbd5e1;
-    
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+}
+
+.form-centralizado {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }

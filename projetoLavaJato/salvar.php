@@ -14,11 +14,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $marcaCarro = $_POST["marcaCarro"];
     $anoCarro = $_POST["anoCarro"];
 
+   
     try {
         $sql = "INSERT INTO usuarios (nomeUsuarios, cpfUsuarios, celularUsuarios, emailUsuarios, dataNascUsuarios) VALUES (:nome, :cpf, :celular, :email, :dataNasc)";
         $sql2 = "INSERT INTO veiculos (placaCarro, marcaCarro, anoCarro) VALUES (:placaCarro, :marcaCarro, :anoCarro)";
         $stmt = $pdo->prepare($sql);
         $stmt2 = $pdo->prepare($sql2);
+
+        
 
         $stmt->bindParam(":nome", $nome);
         $stmt->bindParam(":cpf", $cpf);
@@ -29,6 +32,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt2->bindParam(":marcaCarro", $marcaCarro);
         $stmt2->bindParam(":anoCarro", $anoCarro);
 
+
+        
         if($stmt->execute() && $stmt2->execute()) {
             echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.php';</script>";
         } else {

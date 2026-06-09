@@ -16,23 +16,19 @@
 
     <p>Digite o nome do cliente para pesquisar.</p>
 
-    <form class="formu"action="buscarusuario.php" method="post">
+    <form class="formu" action="buscarusuario.php" method="post">
+    <input type="text" name="busca" placeholder="Digite o nome do cliente">
 
-            <input type="text"
-               name="busca"
-               placeholder="Digite o nome do cliente">
-
-            <button type="submit">
-                Buscar
-            </button>
-            
-           
-      </form>
-        <form action="./home.html" method="post">
-            <button type="submit" class="btn-secondary">
-                    Cancelar
-            </button>
-        </form> 
+    <div class="botoes-group">
+        <button type="submit" class="btn-buscar">
+            Buscar
+        </button>
+        
+        <a href="./home.html" class="btn-secondary">
+            Cancelar
+        </a>
+    </div>
+</form>
 </div>
 
 </body>
