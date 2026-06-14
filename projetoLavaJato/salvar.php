@@ -35,7 +35,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         
         if($stmt->execute() && $stmt2->execute()) {
-            echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.php';</script>";
+            header("Location: cadastroUser.php?status=success");
+exit();
         } else {
             echo "Erro ao salvar!";
         }

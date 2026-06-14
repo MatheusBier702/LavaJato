@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="style/cadastroUser.css">
 </head>
 <body>
+  <?php if(isset($_GET['status']) && $_GET['status'] == 'success'): ?>
 
+<div class="modal-overlay show">
+    <div class="modal success">
+        <span class="modal-icon">✅</span>
+
+        <h3>Cadastro Realizado</h3>
+
+        <p>Usuário cadastrado com sucesso!</p>
+
+        <button class="modal-btn"
+            onclick="window.location.href='index.php'">
+            Continuar
+        </button>
+    </div>
+</div>
+
+<?php endif; ?>
     <div class="container">
 
         <div class="topo">
