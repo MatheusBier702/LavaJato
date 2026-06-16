@@ -15,26 +15,20 @@
 
     
     <?php if ($status): ?>
-    <div class="modal-overlay show" id="modal" onclick="closeModal(event)">
-        <div class="modal <?php echo $status === 'success' ? 'success' : 'error'; ?>">
-            <span class="modal-icon">
-                <?php echo $status === 'success' ? '✅' : '❌'; ?>
-            </span>
-            <h3><?php echo $status === 'success' ? 'Acesso Permitido' : 'Acesso Negado'; ?></h3>
-            <p>
-                <?php
-                if ($message) {
-                    echo htmlspecialchars($message);
-                } elseif ($status === 'error') {
-                    echo 'Usuário ou senha incorretos. Verifique e tente novamente.';
-                }
-                ?>
-            </p>
-            <button class="modal-btn" onclick="closeModal()">
-                <?php echo $status === 'success' ? 'Continuar' : 'Tentar novamente'; ?>
-            </button>
-        </div>
+        <div class="modal-overlay show">
+    <div class="modal success">
+    <form method="POST" action="./painel.php">  
+
+        <h3>Login Realizado</h3>
+
+        <p>Usuario Logado Com Sucesso!</p>
+
+        <button type="submit" class="modal-btn">
+             Continuar
+        </button>
+    </form>
     </div>
+</div>
     <?php endif; ?>
 
     <div class="bg-image"></div>
@@ -44,7 +38,7 @@
         <div class="login-box">
 
             <div class="brand">
-                <div class="logo-icon">🚗</div>
+                
                 <h1>Lava<span>Jato</span></h1>
                 <p>Sistema de Gestão Automotiva</p>
             </div>
@@ -54,7 +48,7 @@
                 <div class="input-group">
                     <label for="usuario">E-Mail</label>
                     <div class="input-wrap">
-                        <span class="input-icon">👤</span>
+                        
                         <input type="text" id="usuario" name="usuario" placeholder="Digite seu E-Mail" required autofocus>
                     </div>
                 </div>
@@ -62,7 +56,7 @@
                 <div class="input-group">
                     <label for="senha">CPF</label>
                     <div class="input-wrap">
-                        <span class="input-icon">🔒</span>
+                        
                         <input type="password" id="senha" name="senha" placeholder="Digite seu cpf" required>
                         <button type="button" class="toggle-senha" onclick="toggleSenha()" tabindex="-1" title="Mostrar/ocultar senha">👁</button>
                     </div>
@@ -74,7 +68,7 @@
                 </button>
 
             </form>
-            <form action="./home.html" method="post" class="form-centralizado">
+            <form action="./painel.php" method="post" class="form-centralizado">
             <button type="submit" class="btn-secondary">
                     Cancelar
             </button>

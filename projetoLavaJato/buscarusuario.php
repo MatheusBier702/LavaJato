@@ -46,6 +46,8 @@ $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
             <th>Telefone</th>
             <th>Email</th>
             <th>Data de Nascimento</th>
+            <th>Editar</th>
+            <th>Excluir</th>
         </tr>
 
         <?php
@@ -68,6 +70,18 @@ $resultado = $comando->fetchAll(PDO::FETCH_ASSOC);
              <td>
                 <?php echo $dados['dataNascUsuarios']; ?>
             </td>
+            <td>
+    <a href="editar.php?id=<?php echo $dados['id']; ?>" class="btn-editar">
+        Editar
+    </a>
+    </td>  
+    <td>
+    <a href="deletar.php?id=<?php echo $dados['id']; ?>"
+       class="btn-excluir"
+       onclick="return confirm('Deseja excluir este usuário?')">
+        Excluir
+    </a>
+    </td> 
         </tr>
 
         <?php

@@ -239,13 +239,13 @@ body::before {
     font-size: 15px;
     font-weight: bold;
     transition: 0.3s;
-    
+    text-decoration: none;
 }
 
 .btn-secondary {
     background: #e2e8f0;
     color: #0f172a;
-    
+    text-decoration: none;
 }
 
 .btn-secondary:hover {

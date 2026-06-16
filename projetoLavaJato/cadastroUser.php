@@ -12,16 +12,16 @@
 
 <div class="modal-overlay show">
     <div class="modal success">
-        <span class="modal-icon">✅</span>
-
+        
+    <form method="POST" action="./login.php">  
         <h3>Cadastro Realizado</h3>
 
         <p>Usuário cadastrado com sucesso!</p>
 
-        <button class="modal-btn"
-            onclick="window.location.href='index.php'">
-            Continuar
+        <button type="submit" class="modal-btn">
+             Continuar
         </button>
+    </form>
     </div>
 </div>
 
@@ -104,13 +104,12 @@
                 <button type="submit" class="btn-primary">
                     Finalizar Cadastro
                 </button>
-
-                <button type="submit" class="btn-secondary">
-                    Cancelar
-                </button>
-
             </div>
-
+            <div class="buttons">
+            <a href="painel.php" class="btn-secondary">
+    Cancelar
+</a>
+            </div>
         </form>
 
     </div>
