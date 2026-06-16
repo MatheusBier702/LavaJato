@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/05/2026 às 22:29
+-- Tempo de geração: 16/06/2026 às 22:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `lavajato`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `servicos`
+--
+
+CREATE TABLE `servicos` (
+  `id` int(11) NOT NULL,
+  `cliente` varchar(100) NOT NULL,
+  `veiculo` varchar(100) NOT NULL,
+  `tipoServico` varchar(100) NOT NULL,
+  `valor` double(10,2) NOT NULL,
+  `statusServico` varchar(100) NOT NULL,
+  `dataServico` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `servicos`
+--
+
+INSERT INTO `servicos` (`id`, `cliente`, `veiculo`, `tipoServico`, `valor`, `statusServico`, `dataServico`) VALUES
+(4, 'Matheus Bier Ferraz', 'Honda Civic', 'Polimento', 100.00, 'Concluído', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -41,8 +64,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nomeUsuarios`, `cpfUsuarios`, `celularUsuarios`, `emailUsuarios`, `dataNascUsuarios`) VALUES
-(3, 'Matheus Bier Ferraz', '12345678910', '11981949208', 'matheus@gmail.com', '2009-03-31'),
-(4, 'Matheus Bier Ferraz', '', '', '', '0000-00-00');
+(11, 'Matheus Bier Ferraz', '12345678910', '11981949208', 'matheus@gmail.com', '2009-03-31'),
+(12, 'Fabricio Alvez', '98765432190', '1140028922', 'fabricio@gmail.com', '2008-12-12'),
+(13, 'Clodoaldo', '45645645645', '11956989246', 'clodo@gmail.com', '2012-06-12'),
+(14, 'capitao', '12312312312', '11956989246', 'capitao@gmail.com', '2152-05-31');
 
 -- --------------------------------------------------------
 
@@ -63,12 +88,20 @@ CREATE TABLE `veiculos` (
 --
 
 INSERT INTO `veiculos` (`id`, `usuario_id`, `placaCarro`, `marcaCarro`, `anoCarro`) VALUES
-(2, NULL, 'jfk4002', 'celta', 1999),
-(3, NULL, '', '', 0);
+(10, NULL, 'ABC-1243', 'Honda Civic', 2020),
+(11, NULL, 'ZYW9874', 'Fusca', 1850),
+(12, NULL, 'jfj3282', 'sla', 1990),
+(13, NULL, 'jfj3282', 'sla', 1990);
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices de tabela `servicos`
+--
+ALTER TABLE `servicos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices de tabela `usuarios`
@@ -88,16 +121,22 @@ ALTER TABLE `veiculos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `servicos`
+--
+ALTER TABLE `servicos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `veiculos`
 --
 ALTER TABLE `veiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restrições para tabelas despejadas
